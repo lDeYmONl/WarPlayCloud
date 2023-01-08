@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/icons/logo_title.svg" type="image/gif" />
+    <title>Warplay Cloud</title>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!--Slider-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--SCSS-->
+    <link rel="stylesheet" href="./#source/mainStyle.scss" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+  </head>
+
+  <body>
+    <!--Header-->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <svg
+            class="logo__img"
+            width="189"
+            height="28"
+            viewBox="0 0 189 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M54.32 23.1299L56.816 19.3859L59.288 23.1299C59.504 23.4419 59.84 23.6099 60.224 23.6099H62.432V6.80992H59.624V19.4099L58.208 17.2739L57.728 16.5779C57.296 15.9059 56.312 15.9059 55.88 16.5779L55.4 17.2739L53.984 19.4099V6.80992H51.2V23.6099H53.384C53.768 23.6099 54.104 23.4419 54.32 23.1299ZM72.3526 6.85792C72.2806 6.83392 72.1846 6.80992 72.1126 6.80992H65.9446C65.3206 6.80992 64.8406 7.31392 64.8406 7.93792V23.6099H67.6246V19.5299C68.6566 19.3139 69.5926 18.9059 70.4326 18.3539V23.6099H73.2406V7.93792C73.2406 7.40992 72.8566 6.97792 72.3526 6.85792ZM67.6246 16.6259V9.61792H70.4326V14.4179C69.7846 15.4499 68.8006 16.2419 67.6246 16.6259ZM83.1573 6.85792C83.0853 6.83392 82.9893 6.80992 82.9173 6.80992H75.6453V23.6339H78.4293V19.5299C79.2933 19.3619 80.0853 19.0259 80.8293 18.6179L81.2373 19.3859V23.6339H84.0453V19.3859L82.7733 17.0099C83.2773 16.4339 83.7093 15.8099 84.0453 15.1379V7.93792C84.0213 7.40992 83.6613 6.97792 83.1573 6.85792ZM78.4293 9.61792H81.2373V14.4179C80.5893 15.4499 79.6053 16.2419 78.4293 16.6259V9.61792ZM93.962 6.85792C93.89 6.83392 93.794 6.80992 93.722 6.80992H87.554C86.93 6.80992 86.45 7.31392 86.45 7.93792V23.6099H89.234V19.5299C90.266 19.3139 91.202 18.9059 92.042 18.3539C93.242 17.5619 94.202 16.4339 94.826 15.1379V7.93792C94.826 7.40992 94.466 6.97792 93.962 6.85792ZM89.234 16.6259V9.61792H92.042V14.4179C91.394 15.4499 90.41 16.2419 89.234 16.6259ZM100.039 6.80992H97.2547V22.5059C97.2547 23.1299 97.7347 23.6099 98.3587 23.6099H105.631V20.8259H100.039V6.80992ZM115.571 6.85792C115.499 6.83392 115.403 6.80992 115.331 6.80992H109.163C108.539 6.80992 108.059 7.31392 108.059 7.93792V23.6099H110.843V19.5299C111.875 19.3139 112.811 18.9059 113.651 18.3539V23.6099H116.459V7.93792C116.459 7.40992 116.075 6.97792 115.571 6.85792ZM110.843 16.6259V9.61792H113.651V14.4179C113.003 15.4499 112.019 16.2419 110.843 16.6259ZM126.064 6.80992L123.256 12.4259L120.448 6.80992H117.664L121.864 15.2099V23.6099H124.648V15.2099L128.848 6.80992H126.064ZM130.067 20.8259V23.6099H131.747C132.347 23.6099 132.851 23.1299 132.851 22.5059V20.8259H130.067ZM140.862 20.8259H138.054V9.61792H140.862V12.4739C142.062 12.0419 143.07 11.1539 143.646 10.0259V7.93792C143.646 7.31392 143.166 6.80992 142.542 6.80992H135.27V23.6099H142.542C143.166 23.6099 143.646 23.1299 143.646 22.5059V15.4019H140.862V20.8259ZM148.859 6.80992H146.075V22.5059C146.075 23.1299 146.555 23.6099 147.179 23.6099H154.451V20.8259H148.859V6.80992ZM156.88 7.93792V22.5059C156.88 23.1299 157.36 23.6099 157.984 23.6099H164.152C164.776 23.6099 165.256 23.1299 165.256 22.5059V7.93792C165.256 7.31392 164.776 6.80992 164.152 6.80992H157.984C157.36 6.80992 156.88 7.31392 156.88 7.93792ZM162.472 20.8259H159.664V9.61792H162.472V20.8259ZM173.276 6.80992V20.8259H170.468V6.80992H167.684V22.5059C167.684 23.1299 168.164 23.6099 168.788 23.6099H174.956C175.58 23.6099 176.06 23.1299 176.06 22.5059V6.80992H173.276ZM178.489 6.80992V23.6099H185.761C186.385 23.6099 186.865 23.1299 186.865 22.5059V7.93792C186.865 7.31392 186.385 6.80992 185.761 6.80992H178.489ZM184.081 20.8259H181.273V9.61792H184.081V20.8259Z"
+              fill="currentColor"
+            />
+            <path
+              d="M19.2632 16.0881H13.7406C13.6799 16.0881 13.6248 16.1265 13.6028 16.1813L8.41082 27.2543C8.37224 27.353 8.44389 27.4572 8.54861 27.4517H24.4441C24.5488 27.4517 24.615 27.3421 24.5819 27.2488L19.39 16.1758C19.3734 16.1265 19.3183 16.0881 19.2632 16.0881Z"
+              fill="currentColor"
+            />
+            <path
+              d="M8.48244 24.2983L12.9854 14.7664C12.9964 14.7389 13.002 14.706 12.9909 14.6731L6.47621 0.770181C6.43212 0.605649 6.18961 0.627587 6.18961 0.803087L8.20686 24.2434C8.19583 24.397 8.42181 24.4463 8.48244 24.2983Z"
+              fill="currentColor"
+            />
+            <path
+              d="M0.407926 9.26549L4.65738 0.0626718C4.74556 -0.057985 4.92745 0.00782761 4.92194 0.155906L7.15965 25.6255C7.15414 25.779 6.93919 25.8229 6.87856 25.6803L0.159903 11.3221C-0.121189 10.6421 -0.0274918 9.86329 0.407926 9.26549Z"
+              fill="currentColor"
+            />
+            <path
+              d="M24.7968 24.2434L26.8141 0.80305C26.8141 0.633034 26.5716 0.605612 26.5275 0.770144L20.0128 14.6731C20.0017 14.706 20.0072 14.7389 20.0183 14.7663L24.5213 24.2982C24.5819 24.4463 24.8079 24.3969 24.7968 24.2434Z"
+              fill="currentColor"
+            />
+            <path
+              d="M32.8383 11.3221L26.1196 25.6803C26.059 25.8284 25.844 25.7845 25.8385 25.6254L28.0762 0.155891C28.0707 0.00781251 28.2526 -0.0525157 28.3408 0.0626567L32.5958 9.26548C33.0312 9.86328 33.1194 10.6421 32.8383 11.3221Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__link">Главная</a></li>
+            <li class="navbar__item">
+              <a href="#yak_server-map" class="navbar__link">Сервера</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#yak_download" class="navbar__link">Скачать</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#yak_crossplatform" class="navbar__link"
+                >Открыть в браузере</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="#yak_price" class="navbar__link">Цены</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link">Тех поддержка</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="menu">
+          <div class="menu__btn-show"></div>
+        </div>
+
+        <div class="m-menu-footer">
+          <div class="m-social-links">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-facebook m-social-links__img"></i
+            ></a>
+            <a
+              href="https://discord.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-discord m-social-links__img"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-youtube m-social-links__img"></i
+            ></a>
+          </div>
+          <div class="m-menu-footer__btn-back btn-back menu__btn-show">
+            <svg
+              class="btn-back__img"
+              width="33"
+              height="57"
+              viewBox="0 0 22 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.23223 17.2322C0.255923 18.2085 0.255923 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85787C21.654 3.88156 21.654 2.29864 20.6777 1.32233C19.7014 0.346022 18.1184 0.346022 17.1421 1.32233L1.23223 17.2322ZM4 16.5H3V21.5H4V16.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--First section - slider-->
+    <section class="section-1">
+      <div class="container">
+        <div class="carousel">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="carousel__item-wrap">
+                <img
+                  class="carousel__item"
+                  src="./images/sections/carousel/1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel__item-wrap">
+                <img
+                  class="carousel__item"
+                  src="./images/sections/carousel/2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel__item-wrap">
+                <img
+                  class="carousel__item"
+                  src="./images/sections/carousel/3.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel__item-wrap">
+                <img
+                  class="carousel__item"
+                  src="./images/sections/carousel/4.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="header-info">
+            <h3 class="header-info__sub-header">Сервис облачного гейминга</h3>
+            <h1 class="header-info__main-header">
+              Преврати свое устройство в игровое
+            </h1>
+            <a class="header-info__btn-upgrade">UPGRADE</a>
+          </div>
+          <div class="m-menu">
+            <div class="m-menu__btn-show menu__btn-show"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Second section - server-info-->
+    <section id="yak_download" class="section-2">
+      <div class="container">
+        <div class="server">
+          <img
+            class="server__img"
+            src="./images/sections/ServerHost.png"
+            alt="server"
+          />
+        </div>
+        <div class="server-info">
+          <div class="server-info__header section-header">
+            <div class="section-header__header">
+              <div class="section-header__dash"></div>
+              <p class="section-header__description">Облачный гейминг</p>
+            </div>
+
+            <h2 class="section-header__sub-header">Как это работает</h2>
+          </div>
+          <div class="server-info__description">
+            <p>
+              Наши сервера запускают игру, и передают<br />
+              вам картинку, которой вы можете управлять<br />
+              в реальном времени!
+            </p>
+            <hr />
+            <img
+              class="server__img"
+              src="./images/sections/ServerHost.png"
+              alt="server"
+            />
+            <p>
+              Приложение запустится на ПК с процессором<br />
+              от 1.5 GHz , от 1 Gb RAM и доступом в интернет<br />
+              от 15 мбит/с на всех операционых системах <br />
+              Windows 7, 8, 10 MacOS и Linux .
+            </p>
+          </div>
+          <div class="server-info__footer section-footer">
+            <a class="btn-start">Загрузить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Third section - road-to-play-->
+    <section class="section-3">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__header">
+            <div class="section-header__dash"></div>
+            <p class="section-header__description">Быстрый старт</p>
+          </div>
+
+          <h2 class="section-header__sub-header">Начни играть</h2>
+        </div>
+        <div class="road-to-play">
+          <div class="road-to-play__item">
+            <img
+              class="road-to-play__img"
+              src="./images/icons/mail_contact.svg"
+              alt="mail_contact"
+            />
+            <p class="road-to-play__description">Создайте аккаунт</p>
+          </div>
+          <div class="road-to-play__item road-to-play__item-padding">
+            <div class="road-to-play__dash"></div>
+          </div>
+          <div class="road-to-play__item">
+            <img
+              class="road-to-play__img"
+              src="./images/icons/download_from_the_cloud.svg"
+              alt="download_from_the_cloud"
+            />
+            <p class="road-to-play__description">Скачайте модуль</p>
+          </div>
+          <div
+            class="road-to-play__item road-to-play__item-padding road-to-play__m-dash"
+          >
+            <div class="road-to-play__dash"></div>
+          </div>
+          <div class="road-to-play__item">
+            <img
+              class="road-to-play__img"
+              src="./images/icons/ds3_tool.svg"
+              alt="ds3_tool"
+            />
+            <p class="road-to-play__description">Выберите тариф</p>
+          </div>
+          <div class="road-to-play__item road-to-play__item-padding">
+            <div class="road-to-play__dash"></div>
+          </div>
+          <div class="road-to-play__item">
+            <img
+              class="road-to-play__img"
+              src="./images/icons/apple_arcade.svg"
+              alt="apple_arcade"
+            />
+            <p class="road-to-play__description">Начни играть</p>
+          </div>
+        </div>
+        <div class="section-footer">
+          <a class="btn-start">Начать</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Fourth section - subscription-->
+    <section id="yak_price" class="section-4">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__header">
+            <div class="section-header__dash"></div>
+            <p class="section-header__description">Гибкие тарифы</p>
+          </div>
+          <h2 class="section-header__sub-header">Доступные подписки</h2>
+        </div>
+
+        <div class="subscription">
+          <div class="subscription__item">
+            <h3 class="subscription__item-name">Почасовая оплата</h3>
+            <p class="subscription__item-price">45 р. - час</p>
+            <p class="subscription__item-description">
+              Доступно:<br />
+              Каталог игр<br />
+              Виртуальный ПК<br />
+              Безлимитная игровая сессия
+            </p>
+            <button class="subscription__item-btn-choose">Выбрать</button>
+          </div>
+          <div class="subscription__item">
+            <h3 class="subscription__item-name">Подписка Максимум</h3>
+            <p class="subscription__item-price">2999 р. - месяц</p>
+            <p class="subscription__item-description">
+              Доступно:<br />
+              Каталог игр<br />
+              Виртуальный ПК<br />
+              Игровая сессия 10 часов/день
+            </p>
+            <button class="subscription__item-btn-choose">Выбрать</button>
+          </div>
+          <div class="subscription__item">
+            <h3 class="subscription__item-name">Подписка Минимум</h3>
+            <p class="subscription__item-price">1500 р. - месяц</p>
+            <p class="subscription__item-description">
+              Доступно:<br />
+              Каталог игр<br />
+              Игровая сессия 4 часов/день
+            </p>
+            <button class="subscription__item-btn-choose">Выбрать</button>
+          </div>
+        </div>
+        <div class="section-4__footer"></div>
+      </div>
+    </section>
+
+    <!--Fifth section - crossplatform-->
+    <section id="yak_crossplatform" class="section-5">
+      <div class="container">
+        <div class="crossplatform-info">
+          <div class="section-header">
+            <div class="section-header__header">
+              <div class="section-header__dash"></div>
+              <p class="section-header__description">Играть можно в браузере</p>
+            </div>
+            <h2
+              class="section-header__sub-header crossplatform-info__sub-header"
+            >
+              Запускайте на любых устройствах
+            </h2>
+          </div>
+          <div class="crossplatform-info__description">
+            <div class="m-crossplatform">
+              <img
+                class="m-crossplatform__img"
+                src="./images/sections/Сrossplatform.png"
+                alt="crossplatform"
+              />
+            </div>
+            <p>
+              Наш модуль доступен на все популярные ОС <br />
+              и работает на всех компьютерах.
+            </p>
+          </div>
+          <div class="crossplatform-info__footer section-footer">
+            <a class="btn-start">Открыть в браузере</a>
+          </div>
+        </div>
+        <div class="crossplatform">
+          <img
+            class="crossplatform__img"
+            src="./images/sections/Сrossplatform.png"
+            alt="crossplatform"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Sixth section - server-map-->
+    <section id="yak_server-map" class="section-6">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__header">
+            <div class="section-header__dash"></div>
+            <p class="section-header__description">Игровые сервера на карте</p>
+          </div>
+          <h2 class="section-header__sub-header server-map-sub-header">
+            Карта локаций
+          </h2>
+        </div>
+        <div class="server-map">
+          <img
+            src="./images/sections/ServerMap.png"
+            alt=""
+            class="server-map__img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="left-side">
+          <div class="footer-logo">
+            <img
+              src="./images/icons/footer_logo.svg"
+              alt="footer_logo"
+              class="footer-logo__img"
+            />
+          </div>
+          <div class="rights"><p>2022. All rights reserved.</p></div>
+          <div class="signature"><p>Created by Matyash</p></div>
+        </div>
+        <div class="right-side">
+          <div class="politic"><a href="#">Политика конфиденциальности</a></div>
+          <div class="coocie"><a href="#">Файлы Coocie</a></div>
+          <div class="footer-contact">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-facebook footer-contact__img"></i
+            ></a>
+            <a
+              href="https://discord.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-discord footer-contact__img"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-youtube footer-contact__img"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Modal form: choose OS -> registration -> authorization-->
+    <div class="modal-form">
+      <div class="choose-OS">
+        <div class="modal-form__header">
+          <button class="modal-form__btn-back choose-OS__btn-back">
+            <svg
+              width="14"
+              height="24"
+              viewBox="0 0 14 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.93934 10.9393C0.353554 11.5251 0.353554 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807613 11.0711 0.807613 10.4853 1.3934L0.93934 10.9393ZM3 10.5H2V13.5H3V10.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <h3 class="modal-form__tittle">Выберете операционную систему</h3>
+        </div>
+        <div class="OS">
+          <a class="OS__link" href="#" tag="windows">
+            <img
+              src="./images/icons/OS/Windows 10.svg"
+              alt="Windows"
+              class="OS__img"
+          /></a>
+          <a class="OS__link" href="#" tag="mac">
+            <img
+              src="./images/icons/OS/Mac Client.svg"
+              alt="Mac"
+              class="OS__img"
+          /></a>
+          <a class="OS__link" href="#" tag="linux">
+            <img src="./images/icons/OS/Linux.svg" alt="Linux" class="OS__img"
+          /></a>
+          <a class="OS__link" href="#" tag="chrome">
+            <img
+              src="./images/icons/OS/Chrome.svg"
+              alt="Chrome"
+              class="OS__img"
+          /></a>
+        </div>
+      </div>
+      <form class="registration">
+        <div class="modal-form__header">
+          <button class="modal-form__btn-back registration__btn-back">
+            <svg
+              width="14"
+              height="24"
+              viewBox="0 0 14 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.93934 10.9393C0.353554 11.5251 0.353554 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807613 11.0711 0.807613 10.4853 1.3934L0.93934 10.9393ZM3 10.5H2V13.5H3V10.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <div class="registration__btn-header">
+            <button
+              class="registration__btn-open-registration btn-open-registration"
+            >
+              <h3 class="modal-form__tittle btn-open-registration__text">
+                Регистрация
+              </h3>
+            </button>
+            <button
+              class="registration__btn-open-authorization btn-open-authorization"
+            >
+              <h3 class="modal-form__tittle btn-open-authorization__text">
+                Вход
+              </h3>
+            </button>
+          </div>
+        </div>
+        <div class="registration-content">
+          <input
+            class="registration-content__input"
+            type="text"
+            name="login"
+            placeholder="Почта / Телефон"
+          />
+          <input
+            class="registration-content__input"
+            type="password"
+            name="password"
+            placeholder="Пароль"
+          />
+          <div class="registration-content__reg">
+            <button class="registration-content__btn-registration">
+              Зарегистрироваться
+            </button>
+
+            <label class="registration-content__politic"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="rememberMe"
+                checked="true"
+              /><span class="checkboxField"></span
+              ><span class="checkboxText"
+                >Я соглашаюсь со следующими установленными правилами: Политика
+                использования файлов cookie WARPLAY.CLOUD, Пользовательское
+                соглашение WARPLAY.CLOUD, Лицензионное соглашение MY.GAMES с
+                конечным пользователем в отношении Игр, Лицензионное соглашение
+                с конечным Пользователем для WARPLAY.CLOUD Игрового центра,
+                Политика конфиденциальности портала WARPLAY.CLOUD, Политика
+                конфиденциальности WARPLAY.CLOUD для детей</span
+              ></label
+            >
+          </div>
+          <div class="registration-content__log-in">
+            <label class="registration-content__remember-me"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="rememberMe"
+                checked="true"
+              /><span class="checkboxField"></span
+              ><span class="checkboxText">Запомнить</span></label
+            >
+            <button class="registration-content__btn-log-in">Войти</button>
+          </div>
+          <div
+            class="registration-content__alternative-log-in alternative-log-in"
+          >
+            <div class="alternative-log-in__header">
+              <div></div>
+              <p>Войти через</p>
+              <div></div>
+            </div>
+            <div class="alternative-log-in__social-networks-links">
+              <button class="alternative-log-in__img-wrapper">
+                <img
+                  class="alternative-log-in__img"
+                  src="./images/LogIn/Apple.png"
+                  alt="Apple"
+                />
+              </button>
+              <button class="alternative-log-in__img-wrapper">
+                <img
+                  class="alternative-log-in__img"
+                  src="./images/LogIn/Google.png"
+                  alt="Google"
+                />
+              </button>
+              <button class="alternative-log-in__img-wrapper">
+                <img
+                  class="alternative-log-in__img"
+                  src="./images/LogIn/Facebook.png"
+                  alt="Facebook"
+                />
+              </button>
+              <button class="alternative-log-in__img-wrapper">
+                <img
+                  class="alternative-log-in__img"
+                  src="./images/LogIn/Twitter.png"
+                  alt="Twitter"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!--Icons-->
+    <script
+      src="https://kit.fontawesome.com/8fdd35f860.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--external plagin for adaptive (changing block position after changing resolution)-->
+    <script src="./js/optional/dynamicAdapt_dev.js"></script>
+
+    <script src="js.js"></script>
+  </body>
+</html>
